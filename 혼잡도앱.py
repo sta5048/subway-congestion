@@ -72,7 +72,7 @@ st.title("🚇 대전 지하철 혼잡도 예측")
 
 station = st.selectbox("📍 역명을 선택하세요", sorted(df["역명"].unique()))
 weekday = st.selectbox("📅 요일을 선택하세요", ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"])
-hour = st.slider("⏰ 시간대를 선택하세요", 0, 23, 7)
+hour = st.slider("⏰ 시간대를 선택하세요", 5, 23, 7)
 
 if st.button("예측하기"):
     result_text, congestion = get_congestion_level(station, weekday, hour)
